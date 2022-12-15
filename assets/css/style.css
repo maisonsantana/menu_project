@@ -1,10 +1,70 @@
-:root {
-  font-family: "Ubuntu", sans-serif;
-  background-color: rgb(146, 144, 144);
-}
 * {
-  box-sizing: border-box;
   margin: 0;
   border: none;
   padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-family: "Ubuntu", sans-serif;
+  background-color: rgb(146, 144, 144);
+  --background-listitem-color: rgb(193, 11, 218);
+  --background-sublist-color: rgb(95, 91, 91);
+}
+.nav-list {
+  margin: 20px;
+  font-size: 0;
+}
+.list-item {
+  display: inline-block;
+  padding: 10px;
+  position: relative;
+  text-align: center;
+  font-size: 16px;
+  background-color: var(--background-listitem-color);
+}
+.list-item:hover {
+  background-color: var(--background-sublist-color);
+}
+.link {
+  padding: 10px;
+  width: 100%;
+  text-decoration: none;
+  color: aliceblue;
+}
+.sub-nav-list {
+  display: none;
+}
+.list-item:hover > .sub-nav-list {
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+.sub-list-item {
+  display: block;
+  padding: 10px;
+  background-color: var(--background-listitem-color);
+}
+.sub-list-item:hover {
+  background-color: var(--background-sublist-color);
+}
+.sub-nav-list2 {
+  display: none;
+}
+.sub-list-item2 {
+  display: block;
+  padding: 10px;
+  background-color: var(--background-listitem-color)
+}
+.sub-list-item2:hover {
+  background-color: var(--background-sublist-color);
+}
+.sub-list-item:hover > .sub-nav-list2 {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  right: 0;
+  width: 100%;
 }
